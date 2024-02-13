@@ -17,8 +17,14 @@ Next-Class-2
 --->    };
         See-Lazy-loading (network throttling 3G-slow) and --open-developer-tool(console in any browser) 
         Right-Click Refresh Button--> EmptyCache and Hard Reload
-          
         
+        ------By-Vercel Deployment about "Image"
+        Warning: Using `<img>` could result in slower LCP and higher bandwidth. 
+        Consider using `<Image />` from `next/image` to automatically optimize images.
+         This may incur additional usage or cost from your provider. 
+        https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element          
+        
+
     **Fetch-Revalidation    
     Next me jb "Data" "fetch" hota hai too wo usy "cache" me save kr k rakhta hai or us page per agar koye
     new data bhi aye too wo tb bhi "Data" "cache" hi sy utha ta hai that why he is "Fast" but also a "DrawBack" 
@@ -48,14 +54,11 @@ export default async function Post() {
                     <Link href={"/dashboard"}>Goto Dashboard Page class 1</Link>
                 </p>
 
-                <p className=" left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-                    <Link href={"/post"}>Goto Dashboard Page class 2</Link>
-                </p>
             </div>
 
             {result.products.map((data) => {
                 return (
-                    <div>
+                    <div key={data.id}>
                         <h1>{data.title}</h1>
                         <Image
                             src={data.thumbnail}

@@ -32,7 +32,7 @@ export default async function Dashboard() {
 
             <h1 className='text-5xl mt-4  text-center'>Next-Class 1</h1><br />
             <h1 className='text-3xl  text-center'>Hello Dashboard!</h1><br />
-            <p className='text-center'>Here we html "image" tag</p><br />
+            <p className='text-center'>Here we html &quot; image&quot; tag</p><br />
             <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
 
 
@@ -40,11 +40,9 @@ export default async function Dashboard() {
                     <Link href={"/"}>Goto Home Page</Link>
                 </p>
                 <p className=" left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-                    <Link href={"/post"}>Goto Dashboard Page class 2</Link>
+                    <Link href={"/post"}>Goto Post Page class 2</Link>
                 </p>
-                <p className=" left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-                    <Link href={"/dashboard"}>Goto Dashboard Page class 1</Link>
-                </p>
+
             </div>
             {result.products.map(item => {
                 return <div key={item.id} className='m-10 text-3xl'>
