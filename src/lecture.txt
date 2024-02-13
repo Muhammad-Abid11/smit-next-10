@@ -1,0 +1,35 @@
+
+React-Router-Dom
+SEO friendly
+SSR server side rendering
+
+
+npx create-next-app@latest
+
+
+pages--> me file banao or Routing Done
+https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating
+'use-client'
+useRouter works in client side 
+
+fetch hum direct use krengy Server-Side pe 
+
+
+SSR(server side rendering)
+    Website already hogi jb ap page pe jaogy
+
+Image (console open then you reload with cache clean)
+    component lazy loading krta hai or jb ap scroll kro tb load kryga
+
+
+
+-----x-----
+Next.JS hamen data 1st time API sy la k dyta hai phir baad wo usy cache sy utha hai
+means k agar data change bhi hojaye tb bhi wo usy check nhi kraya
+  const res = await fetch('https://api.example.com/...')
+
+----x----
+new data k liye ap uska ap cache me save hi nhi kren or ya timer lga k itne time bad new data fetch kro
+
+fetch('https://...', { cache: 'no-store' }) 
+fetch('https://...', { next: { revalidate: 3600 } })
